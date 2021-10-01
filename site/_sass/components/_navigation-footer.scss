@@ -1,0 +1,46 @@
+@use '../abstracts/functions' as func;
+
+.footer-nav {  
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &-item {
+            font-family: $font-family-montserrat;
+            font-size: $text-m;
+            text-transform: uppercase;
+            font-weight: func.weight(bold);
+
+            > a {
+                position: relative;
+                display: inline-block;
+                color: $accent-color;
+                margin-bottom: $space-sm;
+                text-decoration: none;
+
+                &::before {
+                    @include underline;
+                }
+
+                &:hover {
+                    color: $accent-color;
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &--active {
+                > a::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@use '../abstracts/functions' as func;
+
+.card {
+    border-radius: $border-radius-md;
+    box-shadow: $box-shadow-cards;
+    height: 100%;
+    border: none;
+
+    &--customer {
+        &__img-container {
+            background-color: $white-color;
+            border-radius: $border-radius-circle;
+            padding-top: 100%;
+            position: relative;
+            overflow: hidden;
+            box-shadow: $box-shadow-clients;
+
+            img {
+                width: 100%;
+                position: absolute;
+                object-fit: contain;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%); 
+            }
+        }
+    }
+
+
+    img {
+        border-radius: $border-radius-md $border-radius-md 0 0;
+    }
+
+    &__content {
+        height: 100%;
+        color: $black-color;
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient(45deg, $accent-color 50%, transparent 0) right /350% 100% no-repeat, linear-gradient(45deg, transparent 50%, $accent-color 0) left /350% 100% no-repeat;
+        transition: $transition;
+
+        &:hover {
+            background-position: center;
+            color: $white-color;
+            border-bottom-left-radius: $border-radius-md;
+            border-bottom-right-radius: $border-radius-md;
+            text-decoration: none;
+
+            .card__btn svg {
+                fill: $white-color;
+            }
+        }
+    }
+
+    &__title {
+        font-size: $text-m;
+        font-weight: func.weight(bold);
+        display: block;
+        padding-bottom: $space-base;
+    }
+
+    &__btn {
+        color: $accent-color;
+        transform: translateY(100%);
+
+        svg {
+            width: 3rem;
+            height: 3rem;
+            fill: $accent-color;
+            border-radius: $border-radius-sm;
+            display: inline-block;
+            transition: $transition;
+        }
+
+        &__text {
+            position: relative;
+            
+
+            &::before {
+                @include underline;
+            }
+        }
+
+        &__icon {
+            display: inline-block;
+            transition: $transition;
+        }
+
+        &:hover {
+            color: $accent-color;
+            text-decoration: none;
+
+            .card__btn__text::before {
+                width: 100%;
+            }
+
+            .card__btn__icon {
+                transform: translateX(0.5rem);
+            }
+        }
+    }
+}
+

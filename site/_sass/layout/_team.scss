@@ -1,0 +1,78 @@
+@use '../abstracts/functions' as func;
+
+.container__team {
+    padding: 0 1rem;
+}
+
+.team {
+
+    &:hover &__image__overlay {
+        height: 100%;
+        opacity: 1;
+    }
+
+    &:hover &__jobtitle {
+        color: $black-color;
+    }
+
+    &__jobtitle {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        color: $white-color;
+        font-weight: func.weight(bold);
+        font-size: $text-lg;
+        transition: $transition;
+    }
+
+    &__name {
+        color: $accent-color;
+        font-weight: func.weight(bold);
+        font-size: $text-lg;
+        padding: 0;
+        text-align: center;
+    }
+
+    &__image {
+        position: relative;
+        padding: 0;    
+
+        img {
+            padding: 0;
+            border-radius: $border-radius-md;   
+        }
+
+        &__overlay {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background-color: transparentize($body-bg, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s cubic-bezier(.47,1.64,.41,.8);
+            cursor: pointer;
+
+            a {
+                color: $accent-color;
+                transition: $transition;
+
+                &:hover {
+                    color: darken($accent-color, 10);
+                    transform: scale(1.1);
+                }
+            }
+
+            &__socials {
+                font-size: $text-elg;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

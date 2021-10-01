@@ -1,0 +1,83 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="wysiwyg">
+    <section class="container-fluid p-0 m-0 fade-in-up">
+        <div class="wysiwyg__header row position-relative p-0 m-0">
+            <img class="wysiwyg__header__img col-12 p-0 m-0" src="../../static/images/cases/{{ hero }}">
+
+            <div class="wysiwyg__header__title-container p-4 pt-5">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="col-md-8 col-lg-6">{{ hero_title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5 fade-in-up">
+        <div class="wysiwyg__customer row justify-content-between align-items-center px-md-3">
+            <a href="{{ link_website }}" class=" col-sm-12 col-md-4 mb-5">
+                <img class="zoom-in-out wysiwyg__customer__logo" src="../../static/images/cases/{{ logo }}" alt="{{ company_name }}logo">
+            </a>
+
+            <div class="col-sm-12 col-md-6">
+                <h2>{{ company_name }}</h2>
+
+                <p>{{ about }}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container fade-in-up">
+        <div class="row">
+            <div class="col">
+                {{ content | safe }}
+            </div>        
+        </div>
+    </section>
+
+    <section class="container my-5 fade-in-up">
+        <h2>Related cases</h2>
+
+        <div class="card-list row row-cols-1 row-cols-md-3 g-4">
+            
+            {% for case in collections.cases %}
+                {% if loop.index0 < 2 %}
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <div class="card">
+                            <img src="../../static/images/cases/{{ case.data.image }}" class="card-img-top" alt="{{ case.data.company_name }}">
+
+                            <a class="card__content" href="{{ case.url | url }}">
+                                <div class="card-body mb-3">
+                                    <span class="card__title">{{ case.data.company_name }}</span>
+                                    
+                                    <p class="card-text">{{ case.data.synopsis }}</p>
+                                </div>
+
+                                <div class="p-3">
+                                    <div class="card__btn" href="{{ case.url | url }}">
+                                        <span class="mb-3">
+                                            <svg class="project-thumbnail__arrow" viewBox="0 0 104 104"><path d="M104 104H0V0h104v104zM5.8 98.2h92.4V5.8H5.8v92.4z"/><path d="M40.7 81.5l-6.1-6.1L57.3 52 34.6 28.6l6.1-6.1L69.4 52z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>   
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="container fade-in-up">
+        <div class="call-to-action mb-5">
+            <p class="call-to-action__text">Inspired by our work?</p>
+
+            <a href="/digital-agency-digital-agency-team-1/contact/" class="call-to-action__link">Let's meet!</a>
+        </div>
+    </section>
+    
+</article>

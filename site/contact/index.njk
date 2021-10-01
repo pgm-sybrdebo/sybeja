@@ -1,0 +1,122 @@
+---
+layout: layouts/base.njk
+title: Contact
+eleventyNavigation:
+  key: Contact
+  order: 5
+---
+<section class="location container-fluid m-0 p-0 fade-in-up">
+    <div id="map" class="map"></div>
+
+    <div class="location__text-balloon">
+        <div class="location__text-balloon__inner"></div>
+
+        <span class="location__text-balloon__inner__title">Say hi!</span>
+
+        <p class="location__text-balloon__inner__content">Do you have a question or would you like to visit us? Contact us via the form below.</p>
+
+        <span class="location__text-balloon__inner__icon">
+            <i class="fas fa-info-circle"></i>
+        </span>
+    </div>
+</section>
+
+<section class="container my-5 fade-in-up">
+    <div class="row justify-content-between">
+        <form class="contact-form col-md-6 mb-5 mb-md-0" action="">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name *</label>
+
+                <input type="text" class="form-control" id="name" required="required" placeholder="Your name">
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address *</label>
+
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="YourEmail@email.com">
+            </div>
+
+             <div class="mb-3">
+                <label for="phone" class="form-label">Phone number</label>
+
+                <input type="tel" class="form-control" id="phone"  placeholder="+32 123 45 67 89" pattern="[+]{1}[0-9]{11,14}">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="topic">What do you want to contact us about? *</label>
+
+                <select class="form-select" id="topic" aria-label="Default select example" required="required">
+                    <option selected value="">--Please choose an option--</option>
+
+                    <option value="Sales">Sales</option>
+
+                    <option value="Job">Job</option>
+
+                    <option value="Geneeral">General</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <span class="form-label mb-2 d-block">Your message *</span>
+
+                <textarea class="form-control" required="required" placeholder="Your message ..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <div class="contact-details col-md-3 mt-5 mt-md-0">
+            <div class="mb-5">
+                <h3>Contact us</h3>
+
+                <ul class="contact-details__contact-list p-0">
+                    <li>
+                        <a href="mailto:sebeja@hotmail.com" class="contact-details__contact-list__contact d-inline-block mb-2">sebeja@hotmail.com</a>
+                    </li>
+
+                    <li>
+                        <a href="tel:+3277777777" class="contact-details__contact-list__contact d-inline-block mb-2">+32 (0)77 77 77 77 </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-5">
+                <h3>Find us</h3>
+
+                <span class="d-block mb-2">SYBEJA</span>
+
+                <span class="d-block mb-2">Foreestelaan 1</span>
+
+                <span class="d-block mb-2">9000 Gent</span>
+            </div>
+
+            <div>
+                <h3>Follow us</h3>
+
+                <a class="contact-details__social" href="https://www.facebook.com/arteveldehogeschool/">
+                    <span class="contact-details__social__icon d-inline-block">
+                        <i class="fab fa-facebook"></i>
+                    </span>
+
+                    <span class="d-inline-block">Facebook</span>
+                </a>
+
+                <a class="contact-details__social" href="https://www.linkedin.com/school/arteveldehogeschool/">
+                    <span class="contact-details__social__icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </span>
+
+                    <span>LinkedIn</span>
+                </a>
+
+                <a class="contact-details__social" href="https://github.com/the8gency/digital-agency-digital-agency-team-1">
+                    <span class="contact-details__social__icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+
+                    <span>Github</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

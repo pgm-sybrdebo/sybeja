@@ -1,0 +1,59 @@
+<footer class="footer fade-in-up">
+    <section class="footer__top">
+        <div class="container">
+            <div class="row justify-content-between gx-8">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-4">
+                    {% include "components/navigation-footer.njk" %}
+                </div>
+                
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-4">
+                    <h3>Contact us</h3>
+
+                    <ul class="footer__top__contact-list p-0">
+                        <li>
+                            <a href="mailto:sebeja@hotmail.com" class="footer__top__contact-list__contact d-inline-block mb-2">sebeja@hotmail.com</a>
+                        </li>
+
+                        <li>
+                            <a href="tel:+3277777777" class="footer__top__contact-list__contact d-inline-block mb-2">+32 (0)77 77 77 77 </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-4">
+                    <h3>Find us</h3>
+                    <span class="d-block mb-2">SYBEJA</span>
+                    <span class="d-block mb-2">Foreestelaan 1</span>
+                    <span class="d-block mb-2">9000 Gent</span>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-4">
+                    <span class="logo logo--footer">
+                        <a href="{{ '/' | url }}" title="Back to the homepage of the {{ site.subdomain }}">
+                            <img class="logo__img" src="{{ site.image | url }}" alt="Sybeja">
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="footer__bottom">
+        <div class="container">
+            <div class="row justify-content-between">
+                <span class="col-auto mb-3">© copyright {{ helpers.currentYear() }}, Sybeja nv</span>
+                
+                <div class="col-auto">
+                    <a class="me-3 mb-3 d-inline-block" href="">Terms and conditions</a>
+                    
+                    <a class="me-3 mb-3 d-inline-block" href="">Cookie policy</a>
+                    
+                    <a class="me-3 mb-3 d-inline-block" href="">Disclaimer</a>
+                    
+                    <a class="d-inline-block mb-3" href="">Privacy policy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</footer>

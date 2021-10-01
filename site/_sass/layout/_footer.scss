@@ -1,0 +1,59 @@
+.footer {
+    color: $black-color;
+
+    &__top {
+        background: $footer-top-color;
+        padding: #{$spacing * 2px} 0 #{$spacing * 1px} 0;
+
+        &__contact-list {
+            list-style: none;
+
+            &__contact {
+                color: $black-color;
+                position: relative;
+    
+                &::before {
+                    @include underline;
+                }
+    
+                &:hover {
+                    text-decoration: none;
+                    color: $accent-color;
+    
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        background-color: $body-bg;
+        padding: #{$spacing * 2px} 0 #{$spacing * 1px} 0;
+
+        a {
+            color: $accent-color;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 0;
+                bottom: -0.2rem;
+                background: $accent-color;
+                height: 0.2rem;
+                transition: $transition;
+            }
+
+            &:hover {
+                text-decoration: none;
+
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

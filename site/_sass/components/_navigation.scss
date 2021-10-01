@@ -1,0 +1,77 @@
+@use '../abstracts/functions' as func;
+
+.nav {
+    --nav-spacing: #{$spacing*1px};
+    display: block;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &-item {
+            font-family: $font-family-montserrat;
+            font-size: 18px;
+            font-weight: func.weight(bold);
+
+            > a {
+                position: relative;
+                display: block;
+                color: $gray-900;
+                padding: calc(var(--nav-spacing)/2) var(--nav-spacing);
+                text-decoration: none;                
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    left: 0;
+                    bottom: 0.5rem;
+                    height: 0.5rem;
+                    width: 50%;
+                    background: transparent;
+                    transition: $transition;
+                }
+
+                &:hover::before {
+                    background: $accent-color;
+                    left: var(--nav-spacing);
+                    border-radius: 3px;
+                    height: 0.5rem;
+                    width: calc(100% - var(--nav-spacing) * 2);
+                }
+            }
+
+            &--active {
+                > a {
+                    position: relative;
+                    
+                    &::before {
+                        left: 0.8rem;
+                        bottom: 0.7rem;
+                        height: 0.8rem;
+                        background: linear-gradient(90deg, rgba(13,202,240,1) 0%, rgba(255,255,255,1) 100%);
+                        border-radius: 3px 0 0 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include medium { 
+        &__list { 
+            flex-direction: row;
+        }
+    }
+
+    @include large { 
+        &__list { 
+            flex-direction: row;
+        }
+    }
+}

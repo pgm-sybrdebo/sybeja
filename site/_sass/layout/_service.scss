@@ -1,0 +1,58 @@
+@use '../abstracts/functions' as func;
+
+.graphic {
+
+    &__image {
+        width: 100%;
+    }
+}
+
+.service {
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: $space-base;
+        background-color: $white-color;
+        border-radius: $border-radius-md;
+        box-shadow: $box-shadow-cards;
+
+        &__btn {
+            color: $accent-color;
+    
+            svg {
+                width: 3rem;
+                height: 3rem;
+                fill: $accent-color;
+                border-radius: 3px;
+            }
+    
+            &__text {
+                position: relative;
+                
+                &::before {
+                    @include underline;
+                }
+            }
+    
+            &__icon {
+                display: inline-block;
+                transition: $transition;
+            }
+    
+            &:hover {
+                color: $accent-color;
+                text-decoration: none;
+    
+                .service__content__btn__text::before {
+                    width: 100%;
+                }
+    
+                .service__content__btn__icon {
+                    transform: translateX(0.5rem);
+                }
+            }
+        }
+    }
+}

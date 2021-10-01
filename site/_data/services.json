@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Content",
+        "content": "We help you create the right content and we optimize it for search engines and social media.",
+        "image": "./static/images/services/content.svg",
+        "link": ""
+    },
+    {
+        "title": "Structure",
+        "content": "We think together with you about the structure of your project. Working out the customer journeys is our strength!",
+        "image": "./static/images/services/structure.svg",
+        "link": ""
+    },
+    {
+        "title": "Design",
+        "content": "Our designers create a new look for your project. This way you get a beautiful design with attention for UX.",
+        "image": "./static/images/services/design.svg",
+        "link": ""
+    },
+    {
+        "title": "Development",
+        "content": "Looking for a website, webshop or app that is user-friendly for both you and the visitor? Our devs are ready for you!",
+        "image": "./static/images/services/development.svg",
+        "link": ""
+    },
+    {
+        "title": "Marketing",
+        "content": "SEO, SEA, Social Media, newsletters ... there are many ways to improve your online visibility.",
+        "image": "./static/images/services/marketing.svg",
+        "link": ""
+    }
+]

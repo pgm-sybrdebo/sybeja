@@ -1,0 +1,20 @@
+[
+    {
+        "firstname": "Jamie-Lee",
+        "lastname": "Hart",
+        "jobtitle": "Designer",
+        "image": "../static/images/team/jamie.png"
+    },  
+    {
+        "firstname": "Sybren",
+        "lastname": "De Boever",
+        "jobtitle": "Developer",
+        "image": "../static/images/team/sybren.png"
+    },  
+    {
+        "firstname": "Bernardo",
+        "lastname": "Martelli",
+        "jobtitle": "Developer",
+        "image": "../static/images/team/bernardo.png"
+    }
+]

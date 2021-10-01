@@ -1,0 +1,19 @@
+.case {
+    background-color: $white-color;
+    border-radius: $border-radius-md;
+    box-shadow: $box-shadow-cards;
+    transition: $transition;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__graphic {
+
+        &__image {
+            width: 100%;
+        }
+    }
+}

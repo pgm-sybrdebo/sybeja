@@ -1,0 +1,119 @@
+---
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+title: Home
+description: Get great at designing amazing websites and mobile applications with high-performance code and neat graphics. In the Associate Degree in Computer Programming you will learn all the tricks of the digital trade.
+---
+
+<section class="hero fade-in-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mt-5 mb-2">
+                <h1>SYBEJA is a digital agency that makes a difference for your brand.</h1>
+            </div>
+
+            <div class="call-to-action call-to-action--hero-home">
+                <p class="call-to-action__text">Ready to tackle your digital challenge together?</p>
+
+                <a href="/digital-agency-digital-agency-team-1/contact/" class="call-to-action__link">Contact us</a>
+            </div>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 204.593"><path data-name="image (10)" d="M0 108.593l24-21.3c24-21.7 72-63.7 120-74.7s96 11 144 42.7c48 32.3 96 74.3 144 90.6 48 15.7 96 5.7 144-16 48-21.3 96-53.3 144-64 48-10.3 96-.3 144 10.7s96 21 144 5.3c48-16.3 96-58.3 144-74.6 48-15.7 96-5.7 144 26.6 48 31.7 96 85.7 120 112l24 26.7v32H0z" fill="#0dcaf0"/></svg>
+</section>
+
+<section class="mt-5 fade-in-up">
+    <div class="container">
+        <h2 class="mb-4">Our services</h2>
+    
+        <div class="card-list row row-cols-1 row-cols-md-3 g-4">
+            {% for service in services %}
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                    <div class="card">
+                        <img src="{{ service.image }}" class="card-img-top p-3" alt="{{ service.title }}">
+                        
+                        <div class="card-body mb-3">
+                            <span class="card__title">{{ service.title }}</span>
+
+                            <p class="card-text">{{ service.content }}</p>
+                        </div>
+                        
+                        <div class="p-3">
+                            <a class="card__btn" href="{{ service.link }}">
+                                <span class="card__btn__text">Read more</span>
+
+                                <span class="card__btn__icon">
+                                    <i class="fas fa-angle-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+{% if collections.cases | artSpotlightFilter | length %}
+    <section class="mt-5 fade-in-up">
+        <div class="container">
+            <h2 class="mb-4">Our latest cases</h2>
+
+            <div class="card-list row row-cols-1 row-cols-md-3 g-4">
+                {% for case in collections.cases | artSpotlightFilter  %}
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <div class="card">
+                            <img src="./static/images/cases/{{ case.data.image }}" class="card-img-top" alt="{{ case.data.company_name }}">
+
+                            <a class="card__content" href="{{ case.url | url }}">
+                                <div class="card-body mb-3">
+                                    <span class="card__title">{{ case.data.company_name }}</span>
+
+                                    <p class="card-text">{{ case.data.synopsis }}</p>
+                                </div>
+
+                                <div class="p-3">
+                                    <div class="card__btn">
+                                        <span class="mb-3">
+                                            <svg class="project-thumbnail__arrow" viewBox="0 0 104 104"><path d="M104 104H0V0h104v104zM5.8 98.2h92.4V5.8H5.8v92.4z"/><path d="M40.7 81.5l-6.1-6.1L57.3 52 34.6 28.6l6.1-6.1L69.4 52z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>   
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endif %}
+
+<section class="mt-5 pt-3 pb-5 special-bg fade-in-up">
+    <div class="container">
+        <h2 class="mb-4">Some of our customers</h2>
+
+        <div class="card-list row g-4">
+            {% for client in clients %}
+                <div class="col-6 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2">
+                    <div class="card--customer">
+                        <div class="card--customer__img-container">
+                            <img class="logo-img" src="{{ client.image }}" title="{{ client.name }}" alt=" {{ client.name }} logo">
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5 mb-5 fade-in-up">
+    <div class="call-to-action">
+        <p class="call-to-action__text">Join our Team!</p>
+
+        <a href="/digital-agency-digital-agency-team-1/contact/" class="call-to-action__link">Contact us</a>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Denys",
+        "image": "./static/images/customers/denys.png"
+    },
+    {
+        "name": "Farmazorg",
+        "image": "./static/images/customers/farmazorg.png"
+    },
+    {
+        "name": "Bostoen",
+        "image": "./static/images/customers/bostoen.png"
+    },
+    {
+        "name": "Schiesser",
+        "image": "./static/images/customers/schiesser.png"
+    },
+    {
+        "name": "Bouwpunt",
+        "image": "./static/images/customers/bouwpunt.png"
+    },
+    {
+        "name": "Welleman",
+        "image": "./static/images/customers/welleman.png"
+    },
+    {
+        "name": "Wian",
+        "image": "./static/images/customers/wian.png"
+    },
+    {
+        "name": "Huyzentruyt",
+        "image": "./static/images/customers/huyzentruyt.png"
+    },
+    {
+        "name": "Dmg",
+        "image": "./static/images/customers/dmg.png"
+    },
+    {
+        "name": "Apple",
+        "image": "./static/images/customers/apple.png"
+    },
+    {
+        "name": "Nike",
+        "image": "./static/images/customers/nike.jpg"
+    },
+    {
+        "name": "Adidas",
+        "image": "./static/images/customers/adidas.png"
+    }
+]

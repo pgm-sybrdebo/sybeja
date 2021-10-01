@@ -1,0 +1,147 @@
+@use '../abstracts/functions' as func;
+
+.location {
+    position: relative;
+    .map {
+        width: 100%;
+        height: 40rem;
+    
+        .marker-popup {
+            .mapboxgl-popup-content {
+                border-radius: $border-radius-md;
+                padding: 1rem;
+            }
+    
+            h1 {
+                font-size: $text-m;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    &__text-balloon {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        width: auto;
+        max-width: 35rem;
+        background-color: $accent-color;
+        padding: $space-base;
+        border-radius: $border-radius-md;
+        margin-right: $space-lg;
+
+        &__inner {
+            position: relative;
+            
+            &__title {
+                font-size: $text-lg;
+                color: $white-color;
+                font-weight: func.weight(bold);
+            }
+    
+            &__content {
+                color: $white-color;
+                font-size: $text-m;
+            }
+
+            &__icon {
+                position: absolute;
+                right: 0.8rem;
+                top: 0.8rem;
+                font-size: $text-m;
+                color: $white-color;
+            }  
+        } 
+    }
+}
+
+.contact-form {
+    .form-label {
+        color: $accent-color;
+        font-size: $text-base;
+    }
+
+    .form-control:focus {
+        border-color: $accent-color;
+        box-shadow: 0 0 0 0.25rem rgb(13 202 240 / 25%);
+    }
+
+    button {
+        background-color: $accent-color;
+        border-color: $accent-color;
+        width: 12rem;
+        height: 3.5rem;
+        font-size: $text-btn;
+        font-weight: func.weight(bold);
+        background:
+            linear-gradient(45deg, $black-color 50%, transparent 0) right /350% 100% no-repeat,
+            linear-gradient(45deg, $accent-color 50%, $black-color 0) left /350% 100% no-repeat;
+        transition: $transition;
+
+        &:hover {
+            background-color: transparentize($white-color, 1);
+            background-position: center;
+            color: $white-color;
+            border-color: $black-color;
+        }
+    }
+
+    textarea {
+        height: 6rem;
+    }
+}
+
+.contact-details {
+    h3 {
+        text-transform: uppercase;
+    }
+
+    &__contact-list {
+        list-style: none;
+
+        &__contact {
+            color: $black-color;
+            transition: $transition;
+            position: relative;
+    
+            &::before {
+                @include underline;
+            }
+    
+            &:hover {
+                color: $accent-color;
+                text-decoration: none;
+    
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        color: $black-color;
+        transition: $transition;
+
+        &:hover {
+            color: $accent-color;
+            text-decoration: none;
+
+            & .contact-details__social__icon {
+                color: darken($accent-color, 10);
+                transform: scale(1.1);
+            }
+        }
+
+        &__icon {
+            font-size: $text-lg;
+            margin-right: 1rem;
+            transition: $transition;
+        }
+    }  
+}

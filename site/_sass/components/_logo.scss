@@ -1,0 +1,22 @@
+@use '../abstracts/functions' as func;
+
+.logo {
+    
+    @include large { 
+        &--footer { 
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__img {
+        width: 10rem;
+        padding-top: $space-sm;
+    }
+
+    @include large { 
+        &__img {
+            width: 14rem;
+        }
+    }
+}

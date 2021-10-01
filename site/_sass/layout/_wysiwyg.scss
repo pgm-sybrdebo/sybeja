@@ -1,0 +1,69 @@
+.wysiwyg {
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        margin-bottom: 3rem;
+    }
+
+    blockquote {
+        font-style: italic;
+        font-size: $text-m;
+        padding-top: 3rem;
+        position: relative;
+        margin: 5rem auto;
+        width: 100%;
+        max-width: 28rem;
+
+        &::before {
+            display: block;
+        content: "\201C";
+        font-size: 4rem;
+        position: absolute;
+        top: -1rem;
+        left: 0rem;
+        color: $accent-color;
+        }
+
+        & + p , & + p + p {
+            max-width: 28rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__header {
+        &__img {
+            height: 16rem;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @include small { &__img { height: 24rem}}
+
+        @include large { &__img { height: 34rem}}
+
+        &__title-container {
+            position: absolute;
+            bottom: 0rem;
+            background: linear-gradient(0deg, rgb(10, 21, 24) 0%, rgba(10, 21, 24, 0) 100%);
+            
+            h1 {
+                color: $white-color;
+                font-size: $text-lg;
+            }
+
+            @include small { h1 { font-size: $text-elg;}}
+
+            @include large { h1 { font-size: $text-elg;}}
+        } 
+    }
+
+    &__customer__logo {
+        max-width: 18rem;
+        display: block;
+        margin: 0 auto;
+    } 
+}

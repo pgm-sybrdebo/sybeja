@@ -1,0 +1,28 @@
+.zoom-in-out:hover {
+    animation-name: inOutZoom;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: $transition;
+
+    &.animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-up {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .zoom-in-out:hover {
+        animation: none
+    }
+}

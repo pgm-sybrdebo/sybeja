@@ -1,0 +1,53 @@
+---
+layout: layouts/base.njk
+title: Services
+eleventyNavigation:
+  key: Services
+  order: 2
+---
+
+<section class="hero fade-in-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mt-5">
+                <h1>Discover our workflow</h1>
+
+                <h2>Discover how we create a suiting grow plan for your business.</h2>
+            </div>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 204.593"><path data-name="image (10)" d="M0 108.593l24-21.3c24-21.7 72-63.7 120-74.7s96 11 144 42.7c48 32.3 96 74.3 144 90.6 48 15.7 96 5.7 144-16 48-21.3 96-53.3 144-64 48-10.3 96-.3 144 10.7s96 21 144 5.3c48-16.3 96-58.3 144-74.6 48-15.7 96-5.7 144 26.6 48 31.7 96 85.7 120 112l24 26.7v32H0z" fill="#0dcaf0"/></svg>
+</section>
+
+<section class="container mt-5 mb-5 fade-in-up">
+    <div class="row align-items-center mb-5">    
+        {% for service in services %}
+            <div class="col-sm-12 col-md-4 graphic">
+                <img class="graphic__image" src=".{{ service.image }}" alt="{{ service.title }}">
+            </div>
+
+            <div class="col-sm-12 col-md-8 service mt-5 mb-5">
+                <h2>{{ service.title }}</h2>
+
+                <div class="service__content">
+                    <p>{{ service.content }}</p>
+
+                    <a class="service__content__btn" href="{{ service.link }}">
+                        <span class="service__content__btn__text">Read more</span>
+                        
+                        <span class="service__content__btn__icon">
+                            <i class="fas fa-angle-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="call-to-action fade-in-up">
+        <p class="call-to-action__text">Let's meet!</p>
+        
+        <a href="/digital-agency-digital-agency-team-1/contact/" class="call-to-action__link">Contact us</a>
+    </div>
+</section>

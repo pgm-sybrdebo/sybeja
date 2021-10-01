@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+title: Team
+eleventyNavigation:
+  key: Team
+  order: 4
+---
+<section class="container mb-5 mt-5 fade-in-up">
+    <h1>Discover our Team!</h1>
+
+    <div class="container__team row justify-content-center justify-content-md-between">
+      {% for member in team %}         
+        <div class="team col-sm-12 col-md-6 col-lg-4 row mt-4 mb-4">
+            <span class="team__jobtitle">{{ member.jobtitle }}</span>
+
+            <div class="team__image">
+                <img class="col-sm-12 col-md-12" src="{{ member.image }}" alt="{{ member.firstname }}">
+
+                <div class="team__image__overlay">
+                    <a href="#">
+                        <span class="team__image__overlay__socials">
+                            <i class="fab fa-facebook"></i>
+                        </span>
+                    </a>
+
+                    <a href="#">
+                        <span class="team__image__overlay__socials">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                    </a>
+
+                    <a href="#">
+                        <span class="team__image__overlay__socials">
+                            <i class="fab fa-github"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            
+            <span class="team__name">{{ member.firstname }} <br> {{ member.lastname }}</span>   
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="call-to-action">
+        <p class="call-to-action__text">Apply spontaneously?</p>
+
+        <a href="/digital-agency-digital-agency-team-1/contact/" class="call-to-action__link">Contact us</a>
+    </div>
+</section>
